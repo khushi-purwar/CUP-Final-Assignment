@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const dotenv = require('dotenv');
+const path = require('path');
 const expressStatusMonitor = require('express-status-monitor');
 const connectDB = require('./config/db');
 
@@ -30,6 +31,15 @@ app.use(require('./routes'));
 
 const port = process.env.PORT || 8080;
 const address = process.env.SERVER_ADDRESS || 'localhost';
+
+// server static assets if in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build')); // set static folder
+  // returning frontend for any route other than api
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  });
+}
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
