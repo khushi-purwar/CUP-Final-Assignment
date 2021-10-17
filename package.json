@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server",
-    "build": "cd client && npm run build",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install  --prefix frontend && npm run build --prefix frontend",
     "dev": "nodemon server",
     "install-client": "npm i --prefix client",
     "start-client": "npm start --prefix client",
