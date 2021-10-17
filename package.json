@@ -1,7 +1,7 @@
 {
-  "name": "el-tutor",
+  "name": "finalassignment",
   "version": "1.0.0",
-  "description": "Online web app that allows teachers and students to keep track of student's grades. Built with MEAN Stack",
+  "description": "",
   "main": "server/index.js",
   "scripts": {
     "start": "node server",
@@ -15,15 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgesimos/el-tutor.git"
+    "url": ""
   },
   "keywords": [],
-  "author": "George Simos",
-  "license": "MIT",
+  "author": "khushipurwar",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/georgesimos/el-tutor/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/georgesimos/el-tutor#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "chalk": "^3.0.0",
